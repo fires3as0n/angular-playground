@@ -1,0 +1,47 @@
+.url-container {
+  padding: 10px;
+  color: red !important;
+}
+
+.navigation {
+  display: flex;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.ulr {
+  font-size: 1.2em;
+  color: blue;
+  margin-left: 10px;
+}
+
+img {
+  width: 50px;
+}
+
+hr {
+  margin: 0;
+}
+
+a {
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffb454;
+}
+
+a:active {
+  text-shadow: 0 0 1px #ffb454;
+}
+
+.assignments-link {
+  color: #18dfff;
+}
+
+.active {
+  color: #ff8214;
+}
