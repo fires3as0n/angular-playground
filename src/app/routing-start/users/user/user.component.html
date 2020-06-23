@@ -1,0 +1,5 @@
+<p>{{user.id}}</p>
+<p>{{user.name}}</p>
+<hr>
+<input [(ngModel)]="customId"/>
+<a routerLink="/users/{{customId}}/randomname">Change ID to {{customId}}</a>

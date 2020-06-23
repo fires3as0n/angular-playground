@@ -1,0 +1,51 @@
+<div
+  appBasicHighlight
+>
+  This div background is changed by a basic highlight directive
+</div>
+
+<div
+  appBetterHighlight
+  [shadowColor]="'purple'"
+>
+  <p>This div is styled by a better highlight directive.</p>
+  <p>Angular checks if element itself or applied directives has any property that have bindings on this element.
+  </p>
+</div>
+
+<div class="unless">
+  <div
+    *appUnless="counter > 5"
+  >
+    This div is shown using custom structural directive *appUnless="counter > 5"
+  </div>
+
+  <div class="controls">
+    <button
+      class="btn btn-primary"
+      (click)="incrementCounter()"
+    >
+      Increment counter
+    </button>
+
+    <span class="btn btn-default">Counter: {{counter}}</span>
+
+    <button
+      class="btn btn-primary"
+      (click)="decrementCounter()"
+    >
+      Decrement counter
+    </button>
+  </div>
+</div>
+
+<div
+  appAddClass
+  firstClass="first-class"
+  secondClass="second-class"
+  class="toggle-class"
+>
+  This div uses custom directive that can add/remove CSS classes on demand
+</div>
+
+

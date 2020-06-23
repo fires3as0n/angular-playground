@@ -1,0 +1,9 @@
+<app-on-push [inputUser]="user"></app-on-push>
+<app-default [inputUser]="user"></app-default>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <label>Name</label>
+  <input name="name" ngModel>
+  <label>Age</label>
+  <input type="number" name="age" ngModel>
+  <button type="submit">Push new data to components</button>
+</form>

@@ -1,0 +1,52 @@
+<label>
+  This input uses event binding
+  <input
+    class="form-control"
+    (input)=onUpdateServerName($event)
+  >
+</label>
+
+<label>
+  This input uses two-way binding.
+  No need to bind-back and can be left for html to handle it unless data can be changed from somewhere else as well (controlled state)
+  <input
+    class="form-control"
+    [(ngModel)]=serverNameTwo
+  >
+</label>
+
+<button
+  [disabled]=allowNewServer
+  class="btn"
+  (click)=onCreateServer()
+>
+  Add server
+</button>
+
+
+<!--CONDITIONAL RENDERING-->
+<p *ngIf="!!serverNameTwo; else noServer">
+  server name: {{ serverNameTwo }}
+</p>
+<!--
+ng-template is just a tag.
+Any tag could be used here
+The feature of ng-template is that bundling will output its contents
+just as simple text
+without wrapping it in any tag
+-->
+<ng-template  #noServer>
+  No serve was created
+</ng-template>
+
+
+<hr />
+<p>{{ allowNewServer }}</p>
+<p [innerText]=allowNewServer></p>
+<p [innerText]=allowNewServer>"gay"</p>
+<hr />
+
+
+<p>{{ serverCreatingStatus }}</p>
+
+<app-server *ngFor="let server of servers"></app-server>

@@ -1,0 +1,15 @@
+<app-cockpit
+  (serverCreated)="onServerAdded($event)"
+  (blueprintAlias)="onBlueprintAdded($event)"
+></app-cockpit>
+<hr />
+<app-server-element
+  *ngFor="let serverElement of serverElements"
+  [element]="serverElement"
+  [elementAlias]="serverElement"
+>
+  <p #passedParagraph>passed from parent</p>
+
+</app-server-element>
+
+

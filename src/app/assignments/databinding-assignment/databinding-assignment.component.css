@@ -1,0 +1,8 @@
+.numbers-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.numbers-container div {
+  width: 50%
+}

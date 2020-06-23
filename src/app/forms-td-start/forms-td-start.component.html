@@ -1,0 +1,138 @@
+<!-- Angular automatically detects forms, but by adding a ref-->
+
+<!--
+1. Form is submitted via standard DOM method: button with type="submint
+inside a form element,
+2. FormsModule prevents default behavior, also an angular event
+ngSubmit is fired whenever the form is submitted
+3. If we simply add #formElement ref (without a value) - an HTML element will be passed to handler
+but we need a JS object representing the form, thus we need to set that ref equal to ngForm
+"-->
+<form
+  (ngSubmit)="onSubmit(formElement)"
+  #formElement="ngForm"
+>
+  <!--  This group will get ng classes as well-->
+  <div ngModelGroup="userData" #userData="ngModelGroup">
+
+    <!-- ngModel register this element as a form control -->
+  <!-- in template driven approach validation can be added only in template   -->
+    <label for="username">Username</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      class="form-control"
+      ngModel
+      required
+      #username
+    />
+    <button
+      class="btn btn-default"
+      type="button"
+      (click)="suggestUserName()"
+    >
+      Suggest an Username
+    </button>
+
+    <button
+      class="btn btn-default"
+      type="button"
+      (click)="suggestUserNameDirectly(username)"
+    >
+      Suggest an Username Directly
+    </button>
+
+    <hr />
+
+    <label for="email">Mail</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      class="form-control"
+      [ngModel]="'asdfasfasdfasdf@kek'"
+      required
+      email
+      #email="ngModel"
+    />
+    <div class="custom-err-msg"
+      *ngIf="email.touched"
+    >
+      Pwahahahahah this field is invalid!!1!
+    </div>
+
+  </div>
+  <div *ngIf="userData.invalid">Hey, the whole user data group is invalid</div>
+
+  <hr />
+
+  <label for="secret">Secret Questions</label>
+  <select
+    id="secret"
+    name="secret"
+    class="form-control"
+    [ngModel]="'pet'"
+  >
+    <option value="pet">Your first Pet?</option>
+    <option value="teacher">Your first teacher?</option>
+  </select>
+
+    <label for="secretAnsw">Your secret answer:</label>
+  <textarea
+    #textarea
+    name="secretAnsw"
+    id="secretAnsw"
+    rows="5"
+    [(ngModel)]="secretAnsw"
+    style="display: block; width: 100%"
+  ></textarea>
+  <button
+    class="btn btn-default"
+    type="button"
+    (click)="suggestSecretAnsw()"
+  >
+    Suggest an Answer
+  </button>
+  <button
+    class="btn btn-default"
+    type="button"
+    (click)="suggestSecretAnswDirectly(textarea)"
+  >
+    Suggest an Answer Directly
+  </button>
+  <button
+    class="btn btn-default"
+    type="button"
+    (click)="suggestSecretAnswByTwoWayBinding()"
+  >
+    Suggest an Answer By TwoWay Binding
+  </button>
+  <div>
+    Your secret is: {{ secretAnsw }}
+  </div>
+
+  <hr />
+
+
+  <label *ngFor="let gender of genders" [for]="gender">
+    <input
+      type="radio"
+      name="gender"
+      [id]="gender"
+      ngModel
+      [value]="gender"
+    />
+    {{ gender }}
+  </label>
+
+  <hr />
+
+  <button
+    class="btn btn-primary"
+    type="submit"
+    [disabled]="formElement.invalid"
+  >
+    Submit
+  </button>
+</form>

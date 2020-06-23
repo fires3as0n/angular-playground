@@ -1,0 +1,41 @@
+div {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid lightslategrey;
+}
+
+.unless {
+  height: 130px;
+  position: relative;
+}
+
+.controls {
+  border: none;
+  position: absolute;
+  bottom: 10px;
+  padding: 0;
+}
+
+.controls .btn{
+  margin-right: 10px;
+}
+
+.toggle-class {
+  font-size: 1.2em;
+}
+
+.first-class {
+  outline: 2px solid deeppink;
+}
+
+.second-class {
+  box-shadow: 0 0 50px brown ;
+}
+
+.third-class {
+  background-color: #9148a5;
+}
+
+.forth-class {
+  color: #de0962;
+}

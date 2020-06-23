@@ -1,0 +1,11 @@
+<div style="border: 1px solid grey; margin: 10px;">
+  <h4>ChangeDetectionStrategy.Default</h4>
+  <h5>Input user</h5>
+  <p>Name: {{ inputUser.name }}</p>
+  <p>Age: {{ inputUser.age }}</p>
+  <h5>Component user</h5>
+  <p>Name: {{ componentUser.name }}</p>
+  <p>Age: {{ componentUser.age }}</p>
+  <button (click)="mutateUser()">Mutate component user</button>
+  <button (click)="reassignUser()">Reassign component user</button>
+</div>
