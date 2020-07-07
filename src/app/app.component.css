@@ -1,10 +1,10 @@
 .url-container {
-  padding: 10px;
   color: red !important;
 }
 
 .navigation {
   display: flex;
+  padding: 0 !important;
 }
 
 .logo {

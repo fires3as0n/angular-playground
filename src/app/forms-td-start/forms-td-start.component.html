@@ -1,16 +1,16 @@
-<!-- Angular automatically detects forms, but by adding a ref-->
+<!-- Angular automatically detects forms, but by adding a ref -->
 
 <!--
 1. Form is submitted via standard DOM method: button with type="submint
 inside a form element,
 2. FormsModule prevents default behavior, also an angular event
 ngSubmit is fired whenever the form is submitted
-3. If we simply add #formElement ref (without a value) - an HTML element will be passed to handler
+3. If we simply add #formElementX ref (without a value) - an HTML element will be passed to handler
 but we need a JS object representing the form, thus we need to set that ref equal to ngForm
 "-->
 <form
-  (ngSubmit)="onSubmit(formElement)"
-  #formElement="ngForm"
+  (ngSubmit)="onSubmit(formElementX)"
+  #formElementX="ngForm"
 >
   <!--  This group will get ng classes as well-->
   <div ngModelGroup="userData" #userData="ngModelGroup">
@@ -131,7 +131,7 @@ but we need a JS object representing the form, thus we need to set that ref equa
   <button
     class="btn btn-primary"
     type="submit"
-    [disabled]="formElement.invalid"
+    [disabled]="formElementX.invalid"
   >
     Submit
   </button>

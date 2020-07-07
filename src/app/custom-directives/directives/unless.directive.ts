@@ -25,6 +25,4 @@ export class UnlessDirective {
       this.viewContainerRef.clear();
     }
   }
-
-
 }

@@ -12,7 +12,7 @@ export class FormsTdStartComponent {
   * directly to handler (onSubmit()) in template, we can access the same object
   * (given its ref is assigned to ngForm) via @ViewChild() directive
    */
-  @ViewChild('formElement') form: NgForm;
+  @ViewChild('formElementX') form: NgForm;
   secretAnsw = '';
   genders = ['male', 'female', 'apache_helicopter'];
 
@@ -79,12 +79,12 @@ export class FormsTdStartComponent {
         this will correctly push changes to form object, thus valid as well`
     }
 
-  onSubmit(formElement: NgForm) {
+  onSubmit(formElementX: NgForm) {
     console.log("\n======form passed via argument======");
-    console.log(formElement);
+    console.log(formElementX);
     console.log("\n======form accessed via @ViewChild()======");
     console.log(this.form);
-    // console.log(formElement.controls.userData.controls.email.invalid);
+    // console.log(formElementX.controls.userData.controls.email.invalid);
 
     this.user.username = this.form.value.userData.username;
 
@@ -97,7 +97,7 @@ export class FormsTdStartComponent {
   /*
   * This way can be used if forms need to be accessed before submission
    */
-  // onSubmit(formElement: NgForm) {
+  // onSubmit(formElementX: NgForm) {
   //   console.log(this.form);
   // }
 }

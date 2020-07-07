@@ -26,10 +26,11 @@ export class BetterHighlightDirective {
   @Input() shadowColor: string = 'grey';
   @Input() textColor: string = 'blue';
 
-  @HostListener('mouseenter', ['$event', '$event.target'])
-  mouseenter(event, eventTarget) {
+  @HostListener('mouseenter', ['$event', '$event.target', '35'])
+  mouseenter(event, eventTarget, thirdArg) {
     console.log(event);
     console.log(eventTarget);
+    console.log(thirdArg);
 
     /*
     * Set style by renderer

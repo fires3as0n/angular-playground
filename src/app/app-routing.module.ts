@@ -26,10 +26,12 @@ import {ServicesComponent} from './services/services.component';
 import {PipesComponent} from './pipes/pipes.component';
 import {HttpComponent} from './http/http.component';
 import {ChangeDetectionComponent} from './change-detection/change-detection.component';
+import {NgTemplateNgContainerComponent} from "./ng-template-ng-container/ng-template-ng-container.component";
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'ng-template-ng-container', component: NgTemplateNgContainerComponent, },
   { path: 'databinding', component: DatabindingComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'custom-directives', component: CustomDirectivesComponent },

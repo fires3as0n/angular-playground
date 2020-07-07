@@ -1,0 +1,48 @@
+<div id="form-and-ngif-with-else">
+  <ng-container *ngIf="lessons.length > 0 else noLessons">
+    <h2>Lessons:</h2>
+    <div *ngFor="let lesson of lessons">
+      {{ lesson }}
+    </div>
+  </ng-container>
+
+  <form (ngSubmit)="onAddLesson(addLessonForm)" #addLessonForm="ngForm">
+    <label for="add-lesson"></label>
+    <input id="add-lesson" name="lesson" type="text" ngModel />
+    <button type="submit">Add lesson</button>
+    <button type="button" (click)="onRemoveLesson()">Remove lesson</button>
+  </form>
+
+  <ng-template #noLessons>
+    <h2>No lessons</h2>
+  </ng-template>
+</div>
+<hr>
+
+<div id="template-outlet">
+  <!--Thought article at angular university says that it is a good place
+  to use ng-container, we can actually use *ngTemplateOutlet on any element
+  and it will be just replaced by what we defined in that template-->
+  <body *ngTemplateOutlet="anotherTemplate"></body>
+
+  <ng-template #anotherTemplate>
+    <h4>Another template text</h4>
+  </ng-template>
+</div>
+<hr>
+
+<div id="template-context">
+  <ng-template #estimateTemplate let-lessonsCounter="estimate">
+    <div> Approximately {{lessonsCounter}} lessons ...</div>
+  </ng-template>
+
+  <!-- Same as before ng-container is unnecessary - any element can be here -->
+  <ng-container
+    *ngTemplateOutlet="estimateTemplate;context:ctx">
+  </ng-container>
+  <head
+    *ngTemplateOutlet="estimateTemplate;context:ctx">
+  </head>
+</div>
+
+<hr />

@@ -48,7 +48,7 @@ import {HttpModule} from './http/http.module';
 import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ChangeDetectionModule } from './change-detection/change-detection.module';
-
+import {NgTemplateNgContainerModule} from "./ng-template-ng-container/ng-template-ng-container.module";
 
 @NgModule({
   declarations: [
@@ -96,7 +96,8 @@ import { ChangeDetectionModule } from './change-detection/change-detection.modul
     HttpModule,
     MatProgressSpinnerModule,
     BrowserAnimationsModule,
-    ChangeDetectionModule
+    ChangeDetectionModule,
+    NgTemplateNgContainerModule
   ],
   providers: [
     AccountService, // to use it in the whole routing-start and other services as well
