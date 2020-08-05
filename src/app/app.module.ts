@@ -49,6 +49,7 @@ import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-b
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ChangeDetectionModule } from './change-detection/change-detection.module';
 import {NgTemplateNgContainerModule} from "./ng-template-ng-container/ng-template-ng-container.module";
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import {NgTemplateNgContainerModule} from "./ng-template-ng-container/ng-templat
     CrossComponentCommunicationComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,

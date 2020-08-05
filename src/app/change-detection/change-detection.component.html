@@ -7,3 +7,13 @@
   <input type="number" name="age" ngModel>
   <button type="submit">Push new data to components</button>
 </form>
+
+
+<div [ngClass]="'first second'">...</div>
+
+<div [ngClass]="['first', 'second', '']">...</div>
+
+<div [ngClass]="{'first': true, 'second': true, 'third': false}">...</div>
+
+<div [ngClass]="{'class1 class2 class3' : true}">...</div>
+

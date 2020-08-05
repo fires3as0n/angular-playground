@@ -27,6 +27,7 @@ import {PipesComponent} from './pipes/pipes.component';
 import {HttpComponent} from './http/http.component';
 import {ChangeDetectionComponent} from './change-detection/change-detection.component';
 import {NgTemplateNgContainerComponent} from "./ng-template-ng-container/ng-template-ng-container.component";
+import {CommonModule} from '@angular/common';
 
 
 const appRoutes: Routes = [
@@ -81,7 +82,8 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes),
+    CommonModule,
+    RouterModule.forRoot(appRoutes)
   ],
   exports: [
     RouterModule

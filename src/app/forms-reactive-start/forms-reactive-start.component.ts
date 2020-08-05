@@ -39,6 +39,9 @@ export class FormsReactiveStartComponent implements OnInit {
     });
 
     this.form.statusChanges.subscribe((value) => console.log(value))
+    /*
+    * Argument to subscription callback here will be this.form.value - very neat.
+     */
     this.form.valueChanges.subscribe((value) => console.log(value))
   }
 
