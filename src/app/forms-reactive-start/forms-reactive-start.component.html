@@ -40,14 +40,14 @@
     </label>
   </div>
 
-   <!--
-   Take in mind that if we had formGroup(several inputs related to one entity)
-   instead of single input, we would have to add another div and bind
-   that group name to that div
-   and only then start to render our inpuits
-   thats a drawback of binding in angular -
-   form structure has to repeat data structure
-   -->
+  <!--
+  Take in mind that if we had formGroup(several inputs related to one entity)
+  instead of single input, we would have to add another div and bind
+  that group name to that div
+  and only then start to render our inpuits
+  thats a drawback of binding in angular -
+  form structure has to repeat data structure
+  -->
   <div formArrayName="hobbies">
     <h4>Your hobbies</h4>
     <button type="button" (click)="onAddHobby()">Add hobby</button>
@@ -60,3 +60,97 @@
 
   <button class="btn btn-primary" type="submit">Submit</button>
 </form>
+
+<div>Forms label & placeholder</div>
+
+<h4>HTML</h4>
+<div class="x-form-field">
+  <h4>label</h4>
+  <label for="one" class="x-label">City</label>
+  <input class="x-input" id="one" placeholder="Saint-Petersburg" />
+</div>
+
+<h4>Legacy + Placeholder</h4>
+<div class="x-form-field">
+  <mat-form-field appearance="legacy">
+    <input matInput placeholder="Material placeholder" />
+  </mat-form-field>
+</div>
+<div class="x-form-field">
+  <mat-form-field appearance="legacy">
+    <input matInput placeholder="Material placeholder" />
+  </mat-form-field>
+</div>
+
+<h4>Standard + Placeholder</h4>
+<div class="x-form-field">
+  <mat-form-field appearance="standard">
+    <input matInput placeholder="Material placeholder" />
+  </mat-form-field>
+</div>
+
+<h4>Legacy + Label</h4>
+<div class="x-form-field">
+  <mat-form-field appearance="legacy">
+    <mat-label>Material label</mat-label>
+    <input matInput  />
+  </mat-form-field>
+</div>
+
+<h4>Standard + Label</h4>
+<div class="x-form-field">
+  <mat-form-field appearance="standard">
+    <mat-label>Material label</mat-label>
+    <input matInput  />
+  </mat-form-field>
+</div>
+
+<h4>Legacy + Non-float Label</h4>
+<div class="x-form-field">
+  <mat-form-field appearance="legacy" floatLabel="never">
+    <mat-label>Material label</mat-label>
+    <input matInput  />
+  </mat-form-field>
+</div>
+
+<h4>Standard + Non-float Label</h4>
+<div class="x-form-field">
+  <mat-form-field appearance="standard" floatLabel="never">
+    <mat-label>Material label</mat-label>
+    <input matInput  />
+  </mat-form-field>
+</div>
+
+<h4>Legacy + Always-float Label</h4>
+<div class="x-form-field">
+  <mat-form-field appearance="legacy" floatLabel="always">
+    <mat-label>Material label</mat-label>
+    <input matInput  />
+  </mat-form-field>
+</div>
+
+<h4>Standard + Always-float Label</h4>
+<div class="x-form-field">
+  <mat-form-field appearance="standard" floatLabel="always">
+    <mat-label>Material label</mat-label>
+    <input matInput  />
+  </mat-form-field>
+</div>
+
+
+<h4>Legacy + Non-float Label + Placeholder</h4>
+<div class="x-form-field">
+  <mat-form-field appearance="legacy" floatLabel="never">
+    <mat-label>Material label</mat-label>
+    <input matInput  placeholder="Material placeholder"/>
+  </mat-form-field>
+</div>
+
+<h4>Standard + Non-float Label + Placeholder</h4>
+<div class="x-form-field">
+  <mat-form-field appearance="standard" floatLabel="never">
+    <mat-label>Material label</mat-label>
+    <input matInput  placeholder="Material placeholder"/>
+  </mat-form-field>
+</div>
+

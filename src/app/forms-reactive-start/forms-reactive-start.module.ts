@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import {ReactiveFormsModule} from "@angular/forms";
 
 import { FormsReactiveStartComponent } from './forms-reactive-start.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { FormsReactiveStartComponent } from './forms-reactive-start.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
 
   ],
   providers: [],

@@ -28,12 +28,14 @@ import {HttpComponent} from './http/http.component';
 import {ChangeDetectionComponent} from './change-detection/change-detection.component';
 import {NgTemplateNgContainerComponent} from "./ng-template-ng-container/ng-template-ng-container.component";
 import {CommonModule} from '@angular/common';
+import {FakerTestComponent} from "./faker-test/faker-test.component";
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'ng-template-ng-container', component: NgTemplateNgContainerComponent, },
   { path: 'databinding', component: DatabindingComponent },
+  { path: 'faker-test', component: FakerTestComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'custom-directives', component: CustomDirectivesComponent },
   { path: 'cross-component-communication', component: CrossComponentCommunicationComponent },

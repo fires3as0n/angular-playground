@@ -2,3 +2,19 @@ form {
   margin: 10px;
   padding: 10px;
 }
+
+.x-form-field {
+  margin: 20px;
+  font-size: 18px;
+}
+
+.x-label {
+  margin-right: 10px;
+}
+
+.x-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 30px;
+  width: 200px;
+}

@@ -1,7 +1,7 @@
 import {Observable, Subscriber, Subscription} from 'rxjs';
 import {PartialObserver} from "rxjs/internal/types";
 
-const observable = new Observable((subscriber: Subscriber) => {
+const observable = new Observable((subscriber: Subscriber<any>) => {
   let count = 0;
   setInterval(
     () => {

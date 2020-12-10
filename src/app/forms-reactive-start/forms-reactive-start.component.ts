@@ -84,7 +84,7 @@ export class FormsReactiveStartComponent implements OnInit {
   }
 
   getUserErrors() {
-    return Object.keys(this.form.get('userData.username').errors)
+    return Object.values(this.form.get('userData.username').errors)
   }
 
   setEmail() {

@@ -50,6 +50,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ChangeDetectionModule } from './change-detection/change-detection.module';
 import {NgTemplateNgContainerModule} from "./ng-template-ng-container/ng-template-ng-container.module";
 import {CommonModule} from '@angular/common';
+import { FakerTestComponent } from './faker-test/faker-test.component';
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ import {CommonModule} from '@angular/common';
     AssignmentsComponent,
     CustomDirectivesComponent,
     CrossComponentCommunicationComponent,
+    FakerTestComponent,
   ],
   imports: [
     CommonModule,
