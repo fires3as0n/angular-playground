@@ -1,12 +1,24 @@
-stages:
-  - deploy
+# Official framework image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/node/tags/
+image: node:12.20.0-buster-slim
+
+# This folder is cached between builds
+# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+#cache:
+#    paths:
+#      - node_modules/
+
+# This job is required for GitLab Pages
 pages:
-  stage: deploy
-  script:
-    - yarn install
-    - yarn run bsb
-  artifacts:
-    paths:
-      - docs
-  only:
-    - master
+    stage: deploy
+    # Export storybook as a static site (to public)
+    script:
+      - npm install
+      - npm run bsb
+    # Required artifact for GitLab Pages
+    artifacts:
+        paths:
+          - docs
+    # Only run on the `storybook` branch
+    only:
+      - master
