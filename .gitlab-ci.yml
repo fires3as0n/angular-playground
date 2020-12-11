@@ -14,11 +14,11 @@ pages:
     # Export storybook as a static site (to public)
     script:
       - npm install
-      - npm run bsb
+      - npm run build-sb -- -o ./public
     # Required artifact for GitLab Pages
     artifacts:
         paths:
-          - docs
+          - public
     # Only run on the `storybook` branch
     only:
       - master

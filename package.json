@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "sb": "start-storybook -p 6006",
-    "bsb": "build-storybook -o ./docs"
+    "bsb": "build-storybook -o ./docs",
+    "build-sb": "build-storybook"
   },
   "private": true,
   "dependencies": {
