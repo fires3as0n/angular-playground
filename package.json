@@ -9,8 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "sb": "start-storybook -p 6006",
-    "bsb": "build-storybook -o ./docs",
-    "build-sb": "build-storybook"
+    "build-storybook": "build-storybook -o ./dist/storybook"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +19,7 @@
     "@angular/compiler": "~9.1.1",
     "@angular/core": "~9.1.1",
     "@angular/forms": "~9.1.1",
+    "@angular/localize": "^11.0.5",
     "@angular/material": "^9.2.2",
     "@angular/platform-browser": "~9.1.1",
     "@angular/platform-browser-dynamic": "~9.1.1",
