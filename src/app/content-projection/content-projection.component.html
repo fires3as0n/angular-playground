@@ -1,0 +1,18 @@
+<p>This can be called:</p>
+<ul>
+  <li>Child components</li>
+  <li>Component projection</li>
+  <li>Or even component transclusion</li>
+</ul>
+
+<app-project-here>
+  <app-project-what></app-project-what>
+  <app-project-a a></app-project-a>
+  <app-project-b b></app-project-b>
+</app-project-here>
+
+<app-project-ngfor>
+  <app-project-what *ngFor="let number of arr"></app-project-what>
+  <app-project-a *ngFor="let number of arr" a></app-project-a>
+  <app-project-b *ngFor="let number of arr" b></app-project-b>
+</app-project-ngfor>

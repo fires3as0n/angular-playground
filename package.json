@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port=1488 --live-reload=false",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -13,29 +13,29 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~9.1.1",
-    "@angular/cdk": "^9.2.2",
-    "@angular/common": "~9.1.1",
-    "@angular/compiler": "~9.1.1",
-    "@angular/core": "~9.1.1",
-    "@angular/forms": "~9.1.1",
+    "@angular/animations": "~10.1.1",
+    "@angular/cdk": "^10.2.2",
+    "@angular/common": "~10.0.0",
+    "@angular/compiler": "~10.1.1",
+    "@angular/core": "~10.1.1",
+    "@angular/forms": "~10.0.0",
     "@angular/localize": "^11.0.5",
-    "@angular/material": "^9.2.2",
-    "@angular/platform-browser": "~9.1.1",
-    "@angular/platform-browser-dynamic": "~9.1.1",
-    "@angular/router": "~9.1.1",
+    "@angular/material": "^10.2.2",
+    "@angular/platform-browser": "~10.1.1",
+    "@angular/platform-browser-dynamic": "~10.1.1",
+    "@angular/router": "~10.1.1",
+    "zone.js": "~0.10.2",
     "@storybook/angular": "^6.1.10",
     "bootstrap": "^3.4.1",
     "faker": "^4.1.0",
     "rxjs": "~6.5.4",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.1",
-    "@angular/cli": "~9.1.1",
-    "@angular/compiler-cli": "~9.1.1",
-    "@angular/language-service": "~9.1.1",
+    "@angular/cli": "~10.0.0",
+    "@angular/compiler-cli": "~10.1.1",
+    "@angular/language-service": "~10.1.1",
     "@storybook/cli": "^6.1.10",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
@@ -51,6 +51,6 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.8.3"
+    "typescript": "^3.9.0"
   }
 }

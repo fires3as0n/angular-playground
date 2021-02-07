@@ -29,6 +29,7 @@ import {ChangeDetectionComponent} from './change-detection/change-detection.comp
 import {NgTemplateNgContainerComponent} from "./ng-template-ng-container/ng-template-ng-container.component";
 import {CommonModule} from '@angular/common';
 import {FakerTestComponent} from "./faker-test/faker-test.component";
+import {ContentProjectionComponent} from "./content-projection/content-projection.component";
 
 
 const appRoutes: Routes = [
@@ -78,6 +79,7 @@ const appRoutes: Routes = [
   { path: 'pipes', component: PipesComponent },
   { path: 'http', component: HttpComponent },
   { path: 'change-detection', component: ChangeDetectionComponent },
+  { path: 'content-projection', component: ContentProjectionComponent },
   { path: 'assignments', component: AssignmentsComponent, children: assignmentsRoutes },
   { path: '**', component: PageNotFoundComponent, data: { message: 'Page not found' } },
 ];

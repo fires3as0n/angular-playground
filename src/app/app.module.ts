@@ -51,6 +51,12 @@ import { ChangeDetectionModule } from './change-detection/change-detection.modul
 import {NgTemplateNgContainerModule} from "./ng-template-ng-container/ng-template-ng-container.module";
 import {CommonModule} from '@angular/common';
 import { FakerTestComponent } from './faker-test/faker-test.component';
+import { ContentProjectionComponent } from './content-projection/content-projection.component';
+import { ProjectHereComponent } from './content-projection/project-here/project-here.component';
+import { ProjectWhatComponent } from './content-projection/project-what/project-what.component';
+import { ProjectAComponent } from './content-projection/project-a/project-a.component';
+import { ProjectBComponent } from './content-projection/project-b/project-b.component';
+import { ProjectNgforComponent } from './content-projection/project-ngfor/project-ngfor.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +91,12 @@ import { FakerTestComponent } from './faker-test/faker-test.component';
     CustomDirectivesComponent,
     CrossComponentCommunicationComponent,
     FakerTestComponent,
+    ContentProjectionComponent,
+    ProjectHereComponent,
+    ProjectWhatComponent,
+    ProjectAComponent,
+    ProjectBComponent,
+    ProjectNgforComponent,
   ],
   imports: [
     CommonModule,

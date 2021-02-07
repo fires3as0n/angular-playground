@@ -1,4 +1,4 @@
-import {Directive, ElementRef, HostBinding, HostListener, Input, Renderer2} from '@angular/core';
+import {Directive, ElementRef, HostBinding, HostListener, Input, Renderer2, TemplateRef} from '@angular/core';
 
 /*
 * All of the styling applied will inline them
@@ -9,7 +9,8 @@ import {Directive, ElementRef, HostBinding, HostListener, Input, Renderer2} from
 export class BetterHighlightDirective {
   constructor(
     private elementRef: ElementRef,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private templateRef: TemplateRef<any>,
   ) { console.log(arguments);}
 
   /*
